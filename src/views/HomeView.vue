@@ -351,8 +351,8 @@ watch(
 
         <div>
           <p class="text-xl mb-2">En savoir plus</p>
-          <p v-html="question.textForMore"></p>
-          <p>
+          <p v-if="question.textForMore" v-html="question.textForMore"></p>
+          <p v-if="question.linkForMore">
             <a
               class="underline break-words"
               :href="question.linkForMore"
